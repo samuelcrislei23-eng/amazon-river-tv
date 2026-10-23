@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amazon River TV</title>
+<style>
+:root{--bg:#fff;--text:#111;--muted:#777;--border:#e5e5e5;--black:#000;--tone:#f2f2f0;
+--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#fff;--text:#111}}
+*{box-sizing:border-box;margin:0}
+html,body{background:var(--bg);color:var(--text);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;letter-spacing:.02em}
+.stage{width:100%;max-width:1920px;margin:0 auto;padding:var(--s6) var(--s8) var(--s9)}
+.lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+a,button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left;text-decoration:none}
+:focus{outline:none}
+.f:focus-visible,.f.on{outline:2px solid var(--black);outline-offset:6px}
+header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-bottom:var(--s7);border-bottom:1px solid var(--border)}
+nav{display:flex;gap:var(--s6)}
+nav a,.util a{font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+nav a.cur{border-bottom:1px solid var(--text);padding-bottom:2px}
+.brand{display:flex;align-items:center;gap:var(--s3)}
+.brand svg{width:40px;height:40px}
+.brand b{font-weight:400;font-size:18px;letter-spacing:.14em;text-transform:uppercase}
+.util{display:flex;gap:var(--s6);justify-content:flex-end;align-items:center}
+.hero{display:grid;grid-template-columns:5fr 7fr;gap:var(--s8);padding:var(--s9) 0 var(--s8);align-items:end}
+.hero h1{font-size:48px;font-weight:600;line-height:1.1;letter-spacing:.01em;margin:var(--s3) 0 var(--s5)}
+.hero p{max-width:44ch;color:var(--muted);line-height:1.6;margin-bottom:var(--s6);font-size:16px}
+.btn{display:inline-block;padding:var(--s3) var(--s6);background:var(--black);color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.btn.sec{background:transparent;border:1px solid var(--text);color:var(--text);margin-left:var(--s3)}
+.art{aspect-ratio:16/9;background:var(--tone);overflow:hidden;position:relative;display:block;width:100%}
+.art svg{width:100%;height:100%;display:block;transition:transform 250ms ease}
+.f:hover .art svg,.f.on .art svg{transform:scale(1.02)}
+.sec-h{margin:var(--s8) 0 var(--s7)}
+.sec-h h2{font-size:24px;font-weight:600;margin-top:var(--s2)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s5) var(--s4)}
+.card .st{margin-top:var(--s4)}
+.card .nm{font-size:14px;margin-top:var(--s2)}
+.card .pr{font-size:13px;color:var(--muted);margin-top:var(--s2)}
+.shelf{display:grid;grid-template-columns:repeat(8,1fr);gap:var(--s4)}
+.app .art{aspect-ratio:1}
+.app .nm{font-size:12px;margin-top:var(--s3)}
+.app .art span{position:absolute;inset:0;display:grid;place-items:center;font-size:20px;font-weight:500;letter-spacing:.08em}
+footer{margin-top:var(--s9);padding-top:var(--s7);border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:end;gap:var(--s7)}
+footer p{max-width:52ch;color:var(--muted);line-height:1.6}
+footer h3{font-size:20px;font-weight:600;margin-bottom:var(--s3)}
+@media (max-width:1100px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.shelf{grid-template-columns:repeat(4,1fr)}.stage{padding:var(--s5)}header{grid-template-columns:1fr;gap:var(--s4)}.util{justify-content:flex-start}nav{flex-wrap:wrap;gap:var(--s4)}}
+@media (min-width:1600px){body{zoom:1.35}}
+@media (prefers-reduced-motion:reduce){.art svg{transition:none}}
+</style>
+</head>
+<body>
+<div class="stage">
+<header>
+ <nav aria-label="Principal">
+  <a class="f cur" href="#">Início</a><a class="f" href="#">Filmes</a><a class="f" href="#">Séries</a><a class="f" href="#">Ao vivo</a><a class="f" href="#">Apps</a>
+ </nav>
+ <div class="brand" aria-label="Amazon River">
+  <svg viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="46"/><path d="M12 30c14 2 30 0 28 10-2 8-20 8-28 20M42 8c-12 4-8 14 8 16 14 3 14 12 2 18-12 6-12 18 2 22 10 4 10 14 0 22M92 46c-14 4-22 8-18 16 4 8 12 8 10 18"/></svg>
+  <b>Amazon River</b>
+ </div>
+ <div class="util"><a class="f" href="#">Buscar</a><span class="lbl" id="wx">Manaus 31°</span><span class="lbl" id="clk">12:00</span></div>
+</header>
+
+<section class="hero">
+ <div>
+  <span class="lbl">Em alta hoje</span>
+  <h1>Noites de rio,<br>do seu jeito.</h1>
+  <p>Seus apps e as séries mais vistas, sem anúncios. Escolha o que assistir e comece em um clique.</p>
+  <a class="btn f" href="#">Assistir agora</a><a class="btn sec f" href="#">Mais detalhes</a>
+ </div>
+ <a class="art f" href="#" aria-label="Destaque"><svg id="heroArt" viewBox="0 0 160 90" preserveAspectRatio="xMidYMid slice"></svg></a>
+</section>
+
+<div class="sec-h"><span class="lbl">Novidades</span><h2>Em alta nos seus apps</h2></div>
+<div class="grid" id="picks"></div>
+
+<div class="sec-h"><span class="lbl">Atalhos</span><h2>Seus apps</h2></div>
+<div class="shelf" id="apps"></div>
+
+<footer>
+ <div><h3>AMAZON RIVER®</h3><p>Uma tela inicial rápida e limpa para a sua TV Samsung, feita para deixar o conteúdo aparecer.</p></div>
+ <span class="lbl">Voltar à tela original: Configurações</span>
+</footer>
+</div>
+
+<script>
+var tones=['#f2f2f0','#e8e8e6','#dcdcda','#ececea','#d4d4d2'];
+function river(i,w,h){var o=(i*13)%40;return '<rect width="160" height="90" fill="'+tones[i%5]+'"/><g fill="none" stroke="#111" stroke-width=".7" opacity=".85"><path d="M-10 '+(20+o/2)+'C40 '+(0+o)+' 60 '+(70-o/2)+' 100 '+(40+o/3)+'S150 '+(10+o)+' 175 '+(45)+'"/><path d="M-10 '+(34+o/2)+'C40 '+(14+o)+' 60 '+(84-o/2)+' 100 '+(54+o/3)+'S150 '+(24+o)+' 175 '+(59)+'"/></g>'}
+document.getElementById('heroArt').innerHTML=river(1);
+var picks=[['Disponível','A Última Travessia','Filme · 1h48'],['Novo episódio','Cheia','Série · T2 E4'],['Ao vivo','Boi Garantido','Show · agora'],['Disponível','Margens','Documentário · 52 min'],['Novo episódio','Igarapé','Série · T1 E9'],['Disponível','Madeira e Água','Filme · 1h32'],['Ao vivo','Jornal do Norte','Notícias · agora'],['Disponível','Encontro das Águas','Documentário · 47 min']];
+var P=document.getElementById('picks');
+picks.forEach(function(p,i){P.insertAdjacentHTML('beforeend','<a class="card f" href="#"><span class="art"><svg viewBox="0 0 160 90" preserveAspectRatio="xMidYMid slice">'+river(i+2)+'</svg></span><div class="lbl st">'+p[0]+'</div><div class="nm">'+p[1]+'</div><div class="pr">'+p[2]+'</div></a>')});
+var apps=['Netflix','Prime','YouTube','Disney+','Globoplay','Max','Spotify','Entradas'];
+var A=document.getElementById('apps');
+apps.forEach(function(n,i){A.insertAdjacentHTML('beforeend','<a class="app f" href="#"><span class="art"><svg viewBox="0 0 90 90" preserveAspectRatio="xMidYMid slice"><rect width="90" height="90" fill="'+tones[i%5]+'"/></svg><span>'+n.charAt(0)+'</span></span><div class="nm">'+n+'</div></a>')});
+function tick(){var d=new Date();document.getElementById('clk').textContent=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)}tick();setInterval(tick,30000);
+/* navegação por controle remoto (setas) */
+var cur=null;
+function items(){return Array.prototype.slice.call(document.querySelectorAll('.f'))}
+function setCur(el){if(cur)cur.classList.remove('on');cur=el;el.classList.add('on');el.scrollIntoView({block:'center',behavior:'smooth'})}
+document.addEventListener('keydown',function(e){
+ var k={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[e.key];
+ if(!k)return;e.preventDefault();
+ if(!cur){setCur(items()[0]);return}
+ var r=cur.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,best=null,bs=1e9;
+ items().forEach(function(el){if(el===cur)return;var q=el.getBoundingClientRect(),x=q.left+q.width/2-cx,y=q.top+q.height/2-cy;
+  var along=x*k[0]+y*k[1],across=Math.abs(x*k[1])+Math.abs(y*k[0]);
+  if(along<=4)return;var s=along+across*2.2;if(s<bs){bs=s;best=el}});
+ if(best)setCur(best)});
+document.addEventListener('keydown',function(e){if(e.key==='Enter'&&cur)cur.click()});
+
+/* Samsung Tizen: registra teclas e trata o botão Voltar */
+(function(){try{if(window.tizen&&tizen.tvinputdevice){['MediaPlay','MediaPause','ColorF0Red'].forEach(function(n){try{tizen.tvinputdevice.registerKey(n)}catch(e){}})}}catch(e){}
+document.addEventListener('keydown',function(e){if(e.keyCode===10009){try{tizen.application.getCurrentApplication().exit()}catch(x){history.back()}}});
+window.addEventListener('load',function(){var f=document.querySelector('.hero .btn');if(f&&!cur)setCur(f)})})();
+</script>
+</body>
+</html>
